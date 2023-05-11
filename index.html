@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form method="POST" action="register.php">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <input type="submit" name="register" value="Register">
+  </form>
+</body>
+</html>
+<?php
+// Check if the form is submitted
+if (isset($_POST['register'])) {
+  // Retrieve form data
+  $username = $_POST['username'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  
+  // TODO: Perform additional validation on the form data
+
+  // TODO: Perform database operations (e.g., insert user data)
+
+  // Registration successful
+  echo "Registration successful. Welcome, $username!";
+}
+?>
